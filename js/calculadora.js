@@ -3,6 +3,8 @@ function somar() {
     let val2 = documento.getElementById("valor2").value;
     let soma = parseInt(val1) + parseInt(val2);
     document.getElementById("resultado").innerText = soma;
+    console.log("Soma: " + val1 ," + " + val2);
+    console.log("Soma: " + soma);
 }
 
 function subtrair() {
