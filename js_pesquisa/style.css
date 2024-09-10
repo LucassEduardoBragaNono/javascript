@@ -29,7 +29,7 @@ body {
     background-color: #ddd;
 }
 
-#suggestions, #results {
+.suggestions-container, .results-container {
     margin-top: 10px;
     list-style-type: none;
     padding: 0;
@@ -41,12 +41,16 @@ body {
     z-index: 1000;
 }
 
-#suggestions li, #results li {
+.suggestion, .result-item {
     padding: 10px;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
 }
 
-#suggestions li:hover, #results li:hover {
+.suggestion:hover, .result-item:hover {
     background-color: #f1f1f1;
+}
+
+.suggestion:last-child {
+    border-bottom: none;
 }

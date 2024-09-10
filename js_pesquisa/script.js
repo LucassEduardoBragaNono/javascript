@@ -30,22 +30,23 @@ function showSuggestions() {
             'Honeydew'
         ];
 
-        // Filtrar dados com base na consulta
-        const filteredData = data.filter(item => item.toLowerCase().includes(query));
+        // Filtrar dados para mostrar apenas os que começam com a consulta
+        const filteredData = data.filter(item => item.toLowerCase().startsWith(query));
 
         // Mostrar sugestões
         if (filteredData.length > 0) {
             filteredData.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = item;
-                li.addEventListener('click', () => {
+                const div = document.createElement('div');
+                div.textContent = item;
+                div.className = 'suggestion';
+                div.addEventListener('click', () => {
                     document.getElementById('searchInput').value = item;
                     performSearch();
                 });
-                suggestionsContainer.appendChild(li);
+                suggestionsContainer.appendChild(div);
             });
         } else {
-            suggestionsContainer.innerHTML = '<li>Nenhuma sugestão encontrada.</li>';
+            suggestionsContainer.innerHTML = '<div>Nenhuma sugestão encontrada.</div>';
         }
     }
 }
@@ -68,18 +69,19 @@ function performSearch() {
             'Honeydew'
         ];
 
-        // Filtrar dados com base na consulta
-        const filteredData = data.filter(item => item.toLowerCase().includes(query));
+        // Filtrar dados para mostrar apenas os que começam com a consulta
+        const filteredData = data.filter(item => item.toLowerCase().startsWith(query));
 
         // Mostrar resultados
         if (filteredData.length > 0) {
             filteredData.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = item;
-                resultsContainer.appendChild(li);
+                const div = document.createElement('div');
+                div.textContent = item;
+                div.className = 'result-item';
+                resultsContainer.appendChild(div);
             });
         } else {
-            resultsContainer.innerHTML = '<li>Nenhum resultado encontrado.</li>';
+            resultsContainer.innerHTML = '<div>Nenhum resultado encontrado.</div>';
         }
     }
 }
