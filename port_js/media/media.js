@@ -39,3 +39,6 @@ function verfalta() {
         alert("Boa presença.");
     }
 }
+
+
+Rf= (mf >= 6) && (pf>=75) ? "Aprovado" : "Reprovado"
