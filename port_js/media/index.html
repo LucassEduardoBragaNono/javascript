@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h3>Cálculo de média (5 notas)</h3>
+
+    <form id="media" action="#" method="post">
+        <label for="nota1">Avaliação 1</label>
+        <input type="text" id="nota1" placeholder="Digite sua primeira nota (A1): ">
+
+        <label for="nota2">Avaliação 2</label>
+        <input type="text" id="nota2" placeholder="Digite sua segunda nota (A2): ">
+
+        <label for="nota3">Projeto 1</label>
+        <input type="text" id="nota3" placeholder="Digite sua terceira nota (P1): ">
+
+        <label for="nota4">Projeto 2</label>
+        <input type="text" id="nota4" placeholder="Digite sua quarta nota (P2): ">
+
+        <label for="nota5">Participação diária</label>
+        <input type="text" id="nota5" placeholder="Digite sua quinta nota (PD): ">
+
+        <button type="button" id="calcularmedia" onclick="media()">Calcular</button>
+        <button type="reset" id="limpar">Limpar</button><br>
+
+        <button type="button" id="verificar" onclick="ver()">Verificar média</button>
+
+        <label for="faltas">Faltas</label>
+        <input type="text" id="faltas" placeholder="Digite quantas faltas: ">
+        <button type="button" id="verificarfalta" onclick="verfalta()">Verificar % de presença</button>
+
+        <hr>
+
+        <p>
+            <span>Média final: </span>
+            <span id="mediafinal"></span>
+        </p>
+        <p>
+            <span>% de presença: </span>
+            <span id="falta"></span>
+        </p>
+        <hr>
+
+        <script src="media.js"></script>    
+    </form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 162px;
+}
+
+label, input[text], button{
+    margin-top: 5px;
+}
+
+.resultado{
+    font-weight: bold;
+}
+
+body{
+    font-size: 12px;
+}
